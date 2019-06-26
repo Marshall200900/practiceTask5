@@ -91,14 +91,17 @@ namespace task5
             double sum = 0;
             for (int i = 0, j = maxValues.Length - 1; i < maxValues.Length; i++, j--)
             {
-                Console.WriteLine(maxValues[i] * maxValues[j]);
                 sum += maxValues[i] * maxValues[j];
             }
             return sum;
         }
         static void Main(string[] args)
         {
+            Console.WriteLine("Задача №5 (400)\n" +
+                "Дана действительная квадратная матрица порядка n. \n" +
+                "Получить x1xn + x2xn-1+…+xnx1, где xk – наибольшее значение элементов \nk-й строки данной матрицы.\n");
             int size = IntInput("Введите порядок матрицы: ");
+            Console.WriteLine("Введите построчно элементы матрицы через пробел. Например: 1 2 5 4 ");
             double[][] matrix = new double[size][];
 
             for(int i = 0; i < size; i++)
